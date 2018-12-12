@@ -5,12 +5,10 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <a
-      href="#"
-      class="list-group-item clearfix"
-      *ngFor="let recipe of recipes">
-      <app-recipe-item [recipe]="recipe"></app-recipe-item>
-    </a>
+      <app-recipe-item
+        *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"
+        (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
   </div>
 </div>
 
